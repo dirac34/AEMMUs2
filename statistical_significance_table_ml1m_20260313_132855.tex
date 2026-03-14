@@ -1,0 +1,23 @@
+\begin{table}[htbp]
+\centering
+\caption{Top Filter Configurations with Statistical Significance Tests}
+\label{tab:statistical-significance}
+\begin{tabular}{l|c|c|c|c}
+\hline
+\textbf{Configuration} & \textbf{RMSE} & \textbf{Improv. (\%)} & \textbf{t-test} & \textbf{Wilcoxon} \\
+\hline
+all\_filters & 0.6626*** & +18.61\% & $<$0.001 & 0.041 \\
+best\_three & 0.6683*** & +17.91\% & $<$0.001 & 0.041 \\
+spectral\_bilateral & 0.6689*** & +17.85\% & $<$0.001 & 0.041 \\
+median\_savgol & 0.6702*** & +17.68\% & $<$0.001 & 0.041 \\
+kalman\_consensus & 0.6745*** & +17.15\% & $<$0.001 & 0.041 \\
+stacking\_adaptive & 0.6755*** & +17.03\% & $<$0.001 & 0.041 \\
+adaptive\_ema & 0.6776*** & +16.78\% & $<$0.001 & 0.041 \\
+kalman\_ema & 0.6819*** & +16.25\% & $<$0.001 & 0.041 \\
+kalman\_adaptive & 0.6832*** & +16.09\% & $<$0.001 & 0.041 \\
+stacking\_only & 0.6886*** & +15.43\% & $<$0.001 & 0.041 \\
+\hline
+\multicolumn{5}{l}{\textit{Significance: *** p$<$0.001, ** p$<$0.01, * p$<$0.05}} \\
+\hline
+\end{tabular}
+\end{table}
