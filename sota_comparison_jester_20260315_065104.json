@@ -1,0 +1,14 @@
+{
+  "timestamp": "20260315_065104",
+  "simplex": {
+    "rmse": 1.7759390383314417,
+    "mae": 1.4585374950096517,
+    "test_samples": 22194
+  },
+  "aeemu_best": {
+    "configuration": "kalman_consensus",
+    "rmse": 0.8253337280941014,
+    "mae": 0.702357743789959
+  },
+  "improvement_vs_simplex_pct": 53.526911099970405
+}
