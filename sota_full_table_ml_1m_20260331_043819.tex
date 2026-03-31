@@ -1,0 +1,30 @@
+\begin{table}[htbp]
+\centering
+\caption{Comparison with SOTA baselines on MovieLens 1M (10-fold CV).}
+\label{tab:sota-movielens-1m}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{l ccc cc c}
+\toprule
+\textbf{Method} & \textbf{RMSE} & \textbf{MAE} & \textbf{NDCG@10} & \textbf{HR@10} & \textbf{$\Delta$RMSE} & \textbf{Sig.} \\
+\midrule
+\multicolumn{7}{l}{\textit{Individual baselines}} \\
+MBRCC & 0.8633$\pm$0.0016 & 0.6765 & 0.8743 & 0.9997 & +0.0115 & *** \\
+DualGCN & 0.8703$\pm$0.0033 & 0.6779 & 0.8736 & 0.9998 & +0.0185 & *** \\
+NCF & 0.8771$\pm$0.0023 & 0.6906 & 0.8666 & 0.9996 & +0.0253 & *** \\
+MF & 0.9011$\pm$0.0018 & 0.7015 & 0.8691 & 0.9997 & +0.0493 & *** \\
+SASRec & 0.9874$\pm$0.0034 & 0.7892 & 0.8511 & 0.9995 & +0.1356 & *** \\
+LightGCN & 0.9987$\pm$0.0039 & 0.8003 & 0.8405 & 0.9996 & +0.1469 & *** \\
+RecVAE & 2.3714$\pm$0.0248 & 2.0812 & 0.8127 & 0.9991 & +1.5196 & *** \\
+\midrule
+\multicolumn{7}{l}{\textit{Simple ensemble}} \\
+SimpleWtdEns & 0.8653$\pm$0.0021 & 0.6902 & 0.8843 & 0.9998 & +0.0135 & *** \\
+\midrule
+\multicolumn{7}{l}{\textit{AEEMU (proposed)}} \\
+\textbf{AEEMU\_no\_filters} & \textbf{0.8518$\pm$0.0019} & \textbf{0.6760} & \textbf{0.8848} & \textbf{0.9998} & --- & --- \\
+AEEMU\_best\_three & 0.8742$\pm$0.0032 & 0.6992 & 0.8832 & 0.9998 & --- & --- \\
+AEEMU\_all\_filters & 0.8759$\pm$0.0036 & 0.7009 & 0.8832 & 0.9998 & --- & --- \\
+\bottomrule
+\multicolumn{7}{l}{\footnotesize $\Delta$RMSE: difference vs best AEEMU (positive = AEEMU is better). Sig.: *** $p<$0.001, ** $p<$0.01, * $p<$0.05} \\
+\end{tabular}
+\end{adjustbox}
+\end{table}
