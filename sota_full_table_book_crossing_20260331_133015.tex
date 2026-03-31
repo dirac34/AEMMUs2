@@ -1,0 +1,30 @@
+\begin{table}[htbp]
+\centering
+\caption{Comparison with SOTA baselines on Book-Crossing (10-fold CV).}
+\label{tab:sota-book-crossing}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{l ccc cc c}
+\toprule
+\textbf{Method} & \textbf{RMSE} & \textbf{MAE} & \textbf{NDCG@10} & \textbf{HR@10} & \textbf{$\Delta$RMSE} & \textbf{Sig.} \\
+\midrule
+\multicolumn{7}{l}{\textit{Individual baselines}} \\
+DualGCN & 0.8006$\pm$0.0077 & 0.6067 & 0.8783 & 0.9998 & +0.0129 & *** \\
+MBRCC & 0.8063$\pm$0.0164 & 0.6115 & 0.8768 & 0.9998 & +0.0185 & *** \\
+NCF & 0.8147$\pm$0.0084 & 0.6142 & 0.8715 & 0.9995 & +0.0270 & *** \\
+SASRec & 0.8490$\pm$0.0133 & 0.6546 & 0.8698 & 0.9996 & +0.0613 & *** \\
+MF & 0.8561$\pm$0.0077 & 0.6694 & 0.8638 & 0.9993 & +0.0684 & *** \\
+LightGCN & 0.8899$\pm$0.0092 & 0.7108 & 0.8531 & 0.9998 & +0.1022 & *** \\
+RecVAE & 3.0428$\pm$0.0071 & 2.9119 & 0.8324 & 0.9991 & +2.2551 & *** \\
+\midrule
+\multicolumn{7}{l}{\textit{Simple ensemble}} \\
+SimpleWtdEns & 0.7943$\pm$0.0083 & 0.6216 & 0.8821 & 0.9995 & +0.0066 & *** \\
+\midrule
+\multicolumn{7}{l}{\textit{AEEMU (proposed)}} \\
+\textbf{AEEMU\_no\_filters} & \textbf{0.7877$\pm$0.0078} & \textbf{0.6122} & \textbf{0.8797} & \textbf{0.9991} & --- & --- \\
+AEEMU\_all\_filters & 0.7998$\pm$0.0077 & 0.6264 & 0.8790 & 0.9998 & --- & --- \\
+AEEMU\_best\_three & 0.8003$\pm$0.0083 & 0.6268 & 0.8794 & 0.9998 & --- & --- \\
+\bottomrule
+\multicolumn{7}{l}{\footnotesize $\Delta$RMSE: difference vs best AEEMU (positive = AEEMU is better). Sig.: *** $p<$0.001, ** $p<$0.01, * $p<$0.05} \\
+\end{tabular}
+\end{adjustbox}
+\end{table}
